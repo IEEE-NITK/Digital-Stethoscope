@@ -23,20 +23,20 @@ The demographic info file has 6 columns:
 <br>
 Each audio file name is divided into 5 elements, separated with underscores (_).
 <br>
-- Patient number (101,102,...,226)
-- Recording index
-- Chest location 
-      - a. Trachea (Tc)
-      - b. Anterior left (Al)
-      - c. Anterior right (Ar)
-      - d. Posterior left (Pl)
-      - e. Posterior right (Pr)
-      - f. Lateral left (Ll)
-      - g. Lateral right (Lr)
-- Acquisition mode 
-    - a. sequential/single channel (sc), 
-    - b. simultaneous/multichannel (mc)
-- Recording equipment 
+1.Patient number (101,102,...,226)
+2.Recording index
+3.Chest location 
+      a.Trachea (Tc)
+      b.Anterior left (Al)
+      c.Anterior right (Ar)
+      d.Posterior left (Pl)
+      e.Posterior right (Pr)
+      f.Lateral left (Ll)
+      g.Lateral right (Lr)
+4.Acquisition mode 
+    a.sequential/single channel (sc), 
+    b.simultaneous/multichannel (mc)
+5.Recording equipment 
      - a. AKG C417L Microphone (AKGC417L), 
      - b. 3M Littmann Classic II SE Stethoscope (LittC2SE), 
      - c. 3M Litmmann 3200 Electronic Stethoscope (Litt3200), 
