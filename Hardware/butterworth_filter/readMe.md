@@ -39,3 +39,12 @@ For second order Butterworth filter, the middle term required is sqrt(2) = 1.414
 
 In order to have secured output filter response, it is necessary that the gain Amax is 1.586.
 
+![Screenshot 2023-02-10 233644](https://user-images.githubusercontent.com/97295669/218164589-f4e445ec-7b4f-4142-84b1-e2d737cc82d5.png)
+![Screenshot 2023-02-10 234324](https://user-images.githubusercontent.com/97295669/218166087-1272265a-2fc0-4c5f-a5f3-dd87f58d8326.png)
+
+
+In the above Butterworth filter the values of R is 5.4k ohm and C is 10nF.
+
+The cutoff frequency is given by fc = 1 / (2π√R^2C^2) substituting values of R and C gives fc = 2.95khz.
+
+From above frequency response curve Amax in dB is 4 dB from which gain is obtained as 10^(4/20) = 1.585, which is the required maximum gain to have secured output filter response.
