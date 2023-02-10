@@ -27,7 +27,7 @@ Vout / Vin = Amax / √{1 + (f/fc)4}
 
 The standard form of transfer function of the second order filter is given as
 
-Vout / Vin = Amax /s2 + 2εωns + ωn2
+Vout / Vin = Amax /s^2 + 2ε ωn s + ωn^2
 
 Where ωn = natural frequency of oscillations = 1/R^2C^2
 
