@@ -17,8 +17,7 @@ The archecture of the model used here is as follows :
 |Layer (type) |               Output Shape|              Param #   |
 |---------------|----------------------------|--------------------------|
 | conv2d (Conv2D)     |        (None, 39, 861, 16)  |    80     |   
-                                                                 
- |max_pooling2d (MaxPooling2D )| (None, 19, 430, 16)   |   0      |   
+| max_pooling2d (MaxPooling2D ) | (None, 19, 430, 16)   |   0      |   
                                                                
                                                                  
  |dropout (Dropout)      |     (None, 19, 430, 16)   |    0         |
