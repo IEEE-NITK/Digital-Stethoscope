@@ -9,43 +9,44 @@ There are two seperate model being built here, namely
 ## Lung Model 
 
 ### CNN 
+
 A Convolutional neural network (CNN) is a neural network that has one or more convolutional layers and are used mainly for image processing, classification, segmentation and also for other auto correlated data.
 A convolution is essentially sliding a filter over the input. One helpful way to think about convolutions is this quote from Dr Prasad Samarakoon: “A convolution can be thought as “looking at a function’s surroundings to make better/accurate predictions of its outcome.”
 The archecture of the model used here is as follows :
- Layer (type)                Output Shape              Param #   
-=================================================================
- conv2d (Conv2D)             (None, 39, 861, 16)       80        
+
+|Layer (type) |               Output Shape|              Param #   |
+---------------------------------------------------------------------
+ conv2d (Conv2D)     |        (None, 39, 861, 16)  |    80     |   
                                                                  
- max_pooling2d (MaxPooling2D  (None, 19, 430, 16)      0         
- )                                                               
+ max_pooling2d (MaxPooling2D )| (None, 19, 430, 16)   |   0      |   
+                                                               
                                                                  
- dropout (Dropout)           (None, 19, 430, 16)       0         
+ dropout (Dropout)      |     (None, 19, 430, 16)   |    0         |
                                                                  
- conv2d_1 (Conv2D)           (None, 18, 429, 32)       2080      
+ conv2d_1 (Conv2D)    |       (None, 18, 429, 32)  |     2080     | 
                                                                  
- max_pooling2d_1 (MaxPooling  (None, 9, 214, 32)       0         
- 2D)                                                             
+ max_pooling2d_1 (MaxPooling2D)|  (None, 9, 214, 32) |      0        |                                                              
                                                                  
- dropout_1 (Dropout)         (None, 9, 214, 32)        0         
+ dropout_1 (Dropout)  |       (None, 9, 214, 32)   |    0         |
                                                                  
- conv2d_2 (Conv2D)           (None, 8, 213, 64)        8256      
+ conv2d_2 (Conv2D)    |       (None, 8, 213, 64)   |     8256      |
                                                                  
- max_pooling2d_2 (MaxPooling  (None, 4, 106, 64)       0         
- 2D)                                                             
+ max_pooling2d_2 (MaxPooling 2D) |  (None, 4, 106, 64)  |     0     |    
+                                                             
                                                                  
- dropout_2 (Dropout)         (None, 4, 106, 64)        0         
+ dropout_2 (Dropout)   |      (None, 4, 106, 64)   |     0   |      
                                                                  
- conv2d_3 (Conv2D)           (None, 3, 105, 128)       32896     
+ conv2d_3 (Conv2D)     |      (None, 3, 105, 128)   |    32896    | 
                                                                  
- max_pooling2d_3 (MaxPooling  (None, 1, 52, 128)       0         
- 2D)                                                             
+ max_pooling2d_3 (MaxPooling 2D) |  (None, 1, 52, 128)  |     0   |      
+                                                            
                                                                  
- dropout_3 (Dropout)         (None, 1, 52, 128)        0         
+ dropout_3 (Dropout)    |     (None, 1, 52, 128)   |     0     |    
                                                                  
- global_average_pooling2d (G  (None, 128)              0         
- lobalAveragePooling2D)                                          
+ global_average_pooling2d (G lobalAveragePooling2D)|  (None, 128)    |          0       |  
+                                          
                                                                  
- dense (Dense)               (None, 6)                 774       
+ dense (Dense)      |         (None, 6)         |        774      | 
                                                                  
 ## Heart Model
 
