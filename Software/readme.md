@@ -16,37 +16,37 @@ The archecture of the model used here is as follows :
 
 |Layer (type) |               Output Shape|              Param #   |
 |---------------|----------------------------|--------------------------|
- conv2d (Conv2D)     |        (None, 39, 861, 16)  |    80     |   
+| conv2d (Conv2D)     |        (None, 39, 861, 16)  |    80     |   
                                                                  
- max_pooling2d (MaxPooling2D )| (None, 19, 430, 16)   |   0      |   
+ |max_pooling2d (MaxPooling2D )| (None, 19, 430, 16)   |   0      |   
                                                                
                                                                  
- dropout (Dropout)      |     (None, 19, 430, 16)   |    0         |
+ |dropout (Dropout)      |     (None, 19, 430, 16)   |    0         |
                                                                  
- conv2d_1 (Conv2D)    |       (None, 18, 429, 32)  |     2080     | 
+| conv2d_1 (Conv2D)    |       (None, 18, 429, 32)  |     2080     | 
                                                                  
- max_pooling2d_1 (MaxPooling2D)|  (None, 9, 214, 32) |      0        |                                                              
+| max_pooling2d_1 (MaxPooling2D)|  (None, 9, 214, 32) |      0        |                                                              
                                                                  
- dropout_1 (Dropout)  |       (None, 9, 214, 32)   |    0         |
+| dropout_1 (Dropout)  |       (None, 9, 214, 32)   |    0         |
                                                                  
- conv2d_2 (Conv2D)    |       (None, 8, 213, 64)   |     8256      |
+| conv2d_2 (Conv2D)    |       (None, 8, 213, 64)   |     8256      |
                                                                  
- max_pooling2d_2 (MaxPooling 2D) |  (None, 4, 106, 64)  |     0     |    
+| max_pooling2d_2 (MaxPooling 2D) |  (None, 4, 106, 64)  |     0     |    
                                                              
                                                                  
- dropout_2 (Dropout)   |      (None, 4, 106, 64)   |     0   |      
+ |dropout_2 (Dropout)   |      (None, 4, 106, 64)   |     0   |      
                                                                  
- conv2d_3 (Conv2D)     |      (None, 3, 105, 128)   |    32896    | 
+| conv2d_3 (Conv2D)     |      (None, 3, 105, 128)   |    32896    | 
                                                                  
- max_pooling2d_3 (MaxPooling 2D) |  (None, 1, 52, 128)  |     0   |      
+| max_pooling2d_3 (MaxPooling 2D) |  (None, 1, 52, 128)  |     0   |      
                                                             
                                                                  
- dropout_3 (Dropout)    |     (None, 1, 52, 128)   |     0     |    
+| dropout_3 (Dropout)    |     (None, 1, 52, 128)   |     0     |    
                                                                  
- global_average_pooling2d (G lobalAveragePooling2D)|  (None, 128)    |          0       |  
+ |global_average_pooling2d (G lobalAveragePooling2D)|  (None, 128)    |          0       |  
                                           
                                                                  
- dense (Dense)      |         (None, 6)         |        774      | 
+ |dense (Dense)      |         (None, 6)         |        774      | 
                                                                  
 ## Heart Model
 
