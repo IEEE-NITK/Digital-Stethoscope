@@ -16,8 +16,9 @@ print(t_audio)
 signal_array = np.frombuffer(signal_wave,dtype=np.int16)
 print(signal_array)
 ```
+np.frombuffer() is a function provided by the NumPy library that creates a new numpy array from a buffer. The function takes two parameters buffer and data type . buffer is nothing but data stored in the form of bytes . readframes() reads the input wave and takes value -1 which means it will read the entire wave and return it in the form of bytes.
 
-We used this array to create a new sound file called tes.wav and to do this we used the numpy library and scipy.io.wavfile. 
+We used this array to create a new sound file called test.wav and to do this we used the numpy library and scipy.io.wavfile. 
 To generate the wavefile we can control the frequency and this was set at 44100 Hz as this was the sample rate in the esp.
 
 <b>#array to sound file</b> 
