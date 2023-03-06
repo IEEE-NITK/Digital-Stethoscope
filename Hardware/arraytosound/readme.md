@@ -26,3 +26,10 @@ rate = 44100
 scaled = np.int16(signal_array / np.max(np.abs(signal_array)) * 32767)
 write('test.wav', rate, scaled)
 ```
+scaled is nothing but array which is the input to the write function . i am first doing normalisation by dividing the elements of signal_array by its highest element . after normalisation all the elements are between [-1 to 1] . next i decided to use int16 data format that is it stores 16bits per data 
+so i multiplied each element by 32767 as int16 can store from [-32767 to 32767]
+
+The write function from the scipy.io.wavfile module takes the following parameters :
+file : containing the filename in string form
+rate : samples per second 
+data : a numpy array containg a set of integers which will be written into wav file 
