@@ -1,3 +1,4 @@
+Here we are converting the .wav into an array when we load it.
 ```
 import librosa
 
@@ -5,7 +6,7 @@ import librosa
 audio1, sr1 = librosa.load("/content/001ca53d (1).wav")
 audio2, sr2 = librosa.load("/content/test.wav")
 ```
-here we are converting the .wav into an array when we load it. 
+ 
 To make sure the sample frequency is the same we have writtern a code.
 ```
 # check if the sampling rates are the same
