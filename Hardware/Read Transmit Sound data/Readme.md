@@ -1,1 +1,49 @@
 
+The code is used to collect sound data using an ESP32  from an electret microphone at a rate of 44.1kHz and then transmit it to a device using a Websocket connection.
+The following header files are used to enable communication and web server on the ESP32 .<br>
+WiFi<br>
+AsyncTCP<br>
+ESPAsyncWebServer
+
+**WiFi**: This allows the ESP32 to connect to Wi-Fi networks and create a Wi-Fi access point.
+
+**AsyncTCP**: This provides an asynchronous TCP/IP stack implementation for the ESP32. It enables non-blocking communication over TCP/IP sockets, which can improve the responsiveness and efficiency of the ESP32's network communication.
+
+**ESPAsyncWebServer**: This provides a web server implementation for the ESP32 that can handle HTTP requests and serve web pages. It enables the ESP32 to function as a web server, allowing it to serve dynamic content and respond to requests from other devices on the network. It is built on top of the AsyncTCP library to enable non-blocking communication.
+
+```const char* ssid = "Galaxy M325522";
+const char* password = "zkkt3170";
+```
+
+The  **ssid** variable contains the name of a Wi-Fi network that the ESP32 will connect to, while the **password** variable contains the password for that network.
+
+```
+String a="";
+int value;
+int i = 0;
+volatile int interruptCounter;
+```
+The variables are defined. interruptCounter is declared as volatile int, volatile indicates that its value can be changed by an interrupt service routine (ISR).
+```
+AsyncWebServer server(80);
+AsyncWebSocket ws("/ws");
+```
+The first line initializes the server object of AsyncWebserver class and sets it up to listen for incoming HTTP requests on port 80.
+Then the ws object is initialized and is set up to listen for incoming WebSocket connections on the "/ws" path.
+
+The next part of the code provides a basic web interface for an ESP WebSocket Server and uses a WebSocket client in JavaScript to communicate with a server. A constant character array named index_html using the PROGMEM macro. This macro is used to indicate that the array should be stored in the program memory instead of SRAM. This helps to conserve SRAM.<br>
+
+The index_html array contains the HTML, CSS, and JavaScript code for a web page that serves as an interface for an ESP WebSocket Server. This web page is designed to be viewed on a web browser.<br>
+
+The HTML code includes a <!DOCTYPE> declaration and several tags for defining the structure and content of the web page. The <head> section includes a title for the web page, a viewport meta tag for controlling the viewport settings on mobile devices, and a link to an empty favicon (used to show a small icon in the browser tab).
+The HTML code also includes several CSS styles defined in the <style> section. These styles are applied to different elements of the web page, including the font family, font size, color, background color, and alignment.<br>
+
+The <body> section contains the main content of the web page, including a header with the title "ESP WebSocket Server" and a div with a class content that contains a heading "Digital Stethoscope".<br>
+
+The JavaScript code defines a WebSocket client that connects to a WebSocket server running on the same host as the web page (using the hostname from the window.location object). The WebSocket client is created using the WebSocket constructor and the ws:// protocol. Once the WebSocket connection is established, the client sends and receives messages using the onmessage event handler.<br>
+
+The JavaScript code defines four functions: initWebSocket, onOpen, onClose, and onMessage.<br>The **initWebSocket** function creates a WebSocket object and assigns the onopen, onclose, and onmessage event handlers to the corresponding functions.<br> The **onOpen** function logs a message to the console when the WebSocket connection is opened.<br> The **onClose** function logs a message to the console when the connection is closed and attempts to reopen the connection after a delay of 2 seconds.<br> The **onMessage** function logs the received message data to the console.<br>  The **onLoad** function is called when the web page is loaded and calls initWebSocket to establish the WebSocket connection.
+'''
+hw_timer_t * timer = NULL;
+portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
+'''
