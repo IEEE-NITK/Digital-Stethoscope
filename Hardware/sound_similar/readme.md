@@ -7,7 +7,7 @@ audio1, sr1 = librosa.load("/content/001ca53d (1).wav")
 audio2, sr2 = librosa.load("/content/test.wav")
 ```
  
-To make sure the sample frequency is the same we have writtern a code.
+To make sure the sample frequency is the same we have written a code.
 ```
 # check if the sampling rates are the same
 if sr1 != sr2:
