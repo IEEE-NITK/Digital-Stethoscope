@@ -1,6 +1,34 @@
 ## Code Explanation
 
 ## Cell [1]
+```
+# Load various imports 
+from datetime import datetime
+from os import listdir
+from os.path import isfile, join
+
+import librosa
+import librosa.display
+
+import numpy as np
+import pandas as pd
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, GlobalAveragePooling2D
+from keras.utils import to_categorical
+from tensorflow.keras.callbacks import ModelCheckpoint
+
+from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+```    
+```
+from google.colab import drive
+drive.mount('/content/gdrive')
+```
 This code is importing the necessary packages for a machine learning project that involves audio processing. Specifically, it is importing packages for reading and manipulating audio files, as well as building and training deep learning models. It imports necessary libraries such as librosa, numpy, pandas, tensorflow, and sklearn.
 
  ## Cell [3] - Cell [6]
