@@ -62,7 +62,7 @@ The main goals we have set out for this project are
 <img src="https://cdn.shopify.com/s/files/1/0609/6011/2892/files/doc-esp32-pinout-reference-wroom-devkit.png?width=1384" alt="ESP32 Pinout"
   width="700"
   height="500"
-  align="right"
+  align="middle"
 >
 <p>The microcontroller that we are using in our project is the ESP32.
 The ESP32 is a high-performance microcontroller board that is widely used in Internet of Things (IoT) applications.
