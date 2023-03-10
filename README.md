@@ -114,8 +114,7 @@ Output gate— the input and the memory of the block is used to decide the outpu
 There were multiple architectures used that are explained in detail in the Heart-Model folder
 </p>
 
-<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://www.researchgate.net/publication/341870314/figure/fig2/AS:901539640119297@1591955208476/The-structure-of-Long-Short-Term-Memory-Neural-Network-LSTM.png">
-
+<img width="669" src="https://media.geeksforgeeks.org/wp-content/uploads/newContent1.png">
 
 ## Model
 
