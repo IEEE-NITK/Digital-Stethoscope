@@ -98,11 +98,14 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 
 <!--- Microcontroller description ends --->
-##Deep Learning
+<h3>Deep Learning</h3>
 RNN
+
 <p>Recurrent Neural Network is a generalization of feedforward neural network that has an internal memory. RNN is recurrent in nature as it performs the same function for every input of data while the output of the current input depends on the past one computation. After producing the output, it is copied and sent back into the recurrent network. For making a decision, it considers the current input and the output that it has learned from the previous input.
 Unlike feedforward neural networks, RNNs can use their internal state (memory) to process sequences of inputs. This makes them applicable to tasks such as unsegmented, connected handwriting recognition or speech recognition. In other neural networks, all the inputs are independent of each other. But in RNN, all the inputs are related to each other.
 </p>
+<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Simple_Recurrent_Neural_Network.png">
+
 LSTM
 <p>Long Short-Term Memory (LSTM) networks are a modified version of recurrent neural networks, which makes it easier to remember past data in memory. The vanishing gradient problem of RNN is resolved here. LSTM is well-suited to classify, process and predict time series given time lags of unknown duration. It trains the model by using back-propagation. In an LSTM network, three gates are present:
 Input gate — discover which value from input should be used to modify the memory. Sigmoid function decides which values to let through 0,1. and tanh function gives weightage to the values which are passed deciding their level of importance ranging from-1 to 1.
@@ -110,9 +113,25 @@ Forget gate — discover what details to be discarded from the block. It is deci
 Output gate— the input and the memory of the block is used to decide the output. Sigmoid function decides which values to let through 0,1. and tanh function gives weightage to the values which are passed deciding their level of importance ranging from-1 to 1 and multiplied with output of Sigmoid
 There were multiple architectures used that are explained in detail in the Heart-Model folder
 </p>
-<img width="451" alt="Screenshot 2023-03-10 at 9 38 34 AM" src="https://user-images.githubusercontent.com/119749228/224221113-219b6845-ee16-4984-8a87-2e35149271f8.png">
-<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://user-images.githubusercontent.com/119749228/224221152-a151f040-8d69-4395-b26b-9922371f0ff1.png">
+<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://user-images.githubusercontent.com/119749228/224388357-968e1a6b-347e-49fd-b49e-97095111a611.png">
 
+## Model
+
+Tried couple of architecture but one given here is as :
+|Layer (type) |               Output Shape|              Param #   |
+|---------------|----------------------------|--------------------------|
+| LSTM     |        (None, 30, 256)   |    264192    | 
+| LSTM     |        (None, 30,128)   |     197120     | 
+| LSTM     |        (None, 64)        |    49408      |  
+| Dense    | (None,3) | 195 |
+
+
+## Results
+This gave accuracies of : 
+- model train data score       :  74 %
+- model test data score        :  76 %
+- model validation data score  :  79 %
+- model unlabeled data score   :  74 %
 
 
 ## Project Mentors
