@@ -44,11 +44,34 @@ Digital Stethoscope aims at producing an electronics based amplifying stethoscop
 
 ### Technologies Used
 We have used the following technologies and software for our project
-- Python
-- TensorFlow
-- LTSpice
-- AVR C
-- ESP32
+
+<ul>
+    <li>
+        <a href="https://www.python.org/" target ="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="python "
+        width = "50"
+        height = "50"></a>
+    </li>
+    <li>
+        <a href="https://www.tensorflow.org/" target ="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" alt="TensorFlow "
+        width = "50"
+        height ="50"></a>
+    </li>
+    <li>
+        <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html" target ="_blank"><img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/ltspice%20logo.jpeg" alt="LTSpice"
+        width = "50"
+        height = "50"></a>
+    </li>
+    <li>
+        <a href="https://exploreembedded.com/wiki/Basics_of_AVR_%27C%27" target ="_blank"><img src="https://t4.ftcdn.net/jpg/05/57/67/21/360_F_557672188_zkvWqyC0SoWFRKsdyO6PaZzWmKYs484Q.jpg" alt="AVR C"
+        width = "50"
+        height = "50"></a>
+    </li>
+    <li>
+        <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target ="_blank"><img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/esp%20logo.jpeg" alt="ESP32"
+        width = "50"
+        height = "50"></a>
+    </li>
+</ul>
 
 ## Objectives 
 The main goals we have set out for this project are 
@@ -96,6 +119,23 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 
 <!--- Microcontroller description ends --->
+
+<!--- MFCC STARTS HERE --->
+<h1>MFCC</h1>
+<p>
+Speech Recognition is a supervised learning task. In the speech recognition problem input will be the audio signal and we have to predict the text from the audio signal. We can’t take the raw audio signal as input to our model because there will be a lot of noise in the audio signal. It is observed that extracting features from the audio signal and using it as input to the base model will produce much better performance than directly considering raw audio signal as input. MFCC is the widely used technique for extracting the features from the audio signal.
+</p>
+<h3>The road map of the MFCC technique is given below:</h3>
+<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/roadmap_for_mfcc.jpeg" alt="roadmap for MFCC"
+width = "700"
+height = "500"
+align = "middle"
+>
+<h3>A plot of MFCCs </h3>
+<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/MFCCs.jpg" alt="MFCCs">
+<h3>Power Spectrogram </h3>
+<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/power_spectogram.jpg" alt="MFCCs">
+<!--- MFCC ends HERE --->
 
 ## Project Mentors
 
