@@ -113,7 +113,9 @@ Forget gate — discover what details to be discarded from the block. It is deci
 Output gate— the input and the memory of the block is used to decide the output. Sigmoid function decides which values to let through 0,1. and tanh function gives weightage to the values which are passed deciding their level of importance ranging from-1 to 1 and multiplied with output of Sigmoid
 There were multiple architectures used that are explained in detail in the Heart-Model folder
 </p>
-<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://user-images.githubusercontent.com/119749228/224388357-968e1a6b-347e-49fd-b49e-97095111a611.png">
+
+<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://www.researchgate.net/publication/341870314/figure/fig2/AS:901539640119297@1591955208476/The-structure-of-Long-Short-Term-Memory-Neural-Network-LSTM.png">
+
 
 ## Model
 
@@ -132,7 +134,7 @@ This gave accuracies of :
 - model test data score        :  76 %
 - model validation data score  :  79 %
 - model unlabeled data score   :  74 %
-
+<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://user-images.githubusercontent.com/119749228/224388357-968e1a6b-347e-49fd-b49e-97095111a611.png">
 
 ## Project Mentors
 
