@@ -125,6 +125,81 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 <!--- Microcontroller description ends --->
 
+<!--- MEMS description starts --->
+<h2>MEMS</h2>
+<img src="https://github.com/saliq7/..-../blob/main/IMG_20230309_233920.jpg" alt="MEMS"
+  width="700"
+  height="500"
+  align="middle"
+>
+
+<h3>Overview</h3>
+<p> MEMS (Micro-Electro-Mechanical Systems) is a technology that integrates tiny mechanical components, such as sensors, actuators, and microelectronics, into a miniature system that can interact with the environment. These systems can be used in a wide range of applications, including healthcare, consumer electronics, transportation, and aerospace. </p>
+
+<h3>Usage</h3>
+<p>The MEMS technology can be used to develop various types of systems and devices. Some examples of MEMS applications include:
+<ul>
+<li> Accelerometers: Used to measure acceleration, tilt, and vibration.</li>
+<li> Gyroscopes: Used to measure angular velocity and orientation. </li>
+<li> Microphones: Used to convert sound waves into electrical signals.</li>
+<li> Pressure sensors: Used to measure pressure changes in gas or liquids. </li>
+</ul>
+</p>
+
+<h3>Advantages</h3>
+<p>MEMS technology offers several advantages over traditional technologies:
+<ul>
+<li>Miniaturization: MEMS devices can be fabricated in tiny sizes, making them ideal for applications where space is limited.
+<li>Low power consumption: MEMS devices consume very little power, which makes them ideal for battery-operated applications.
+<li>High precision: MEMS devices can be fabricated with high precision, making them suitable for applications that require high accuracy.
+<li>Integration: MEMS devices can be integrated with other components, such as microelectronics, to create complex systems.
+</ul>
+</p>
+
+<h3>MEMS as mic</h3>
+<p>
+MEMS (Microelectromechanical Systems) sensors have emerged as a promising
+technology for various applications including microphones. MEMS microphones
+are tiny devices that can capture sound and convert it into an electrical signal.
+MEMS microphones offer several advantages over traditional electromagnetic
+microphones, including smaller sizes, lower power consumption, and higher
+sensitivity.
+The design of the overall system is shown in Figure 1. The auscultation probe of
+the MEMS electronic heart sound sensor is affixed to the registry and receives the
+faint heart sound signals. The heart sounds are transferred to the filter after the
+pre-amplifier to filter the high-frequency noise of the filter and environment and
+the high-frequency components of the signals. Then the signals are transferred to a
+PC or mobile phone for real-time display after the comparator. The signals also
+would be transmitted to a loudspeaker or headphones for listening after the power
+amplifier
+</p>
+<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/mems.jpg" alt="Explaination of mems as a mic">
+
+<h3>Why MEMS</h3>
+<p>
+MEMS microphones have shown significant promise in terms of their performance
+compared to traditional electromagnetic microphones. MEMS microphones have
+the potential to be used in various applications, including hearing aids,
+smartphones, and other portable electronic devices. Ongoing research in this field
+aims to improve the performance of MEMS microphones even further, and their
+use is expected to increase in the future.
+</p>
+
+<h3>Challenges</h3>
+<p>MEMS technology also poses several challenges that need to be addressed:
+<ul>
+<li>Fabrication: The process of fabricating MEMS devices is complex and requires specialized equipment.
+<li>Reliability: MEMS devices may fail due to factors such as mechanical stress, temperature changes, and contamination.
+<li>Packaging: MEMS devices need to be packaged in a way that protects them from the environment and ensures their reliability.
+<li>Cost: The cost of fabricating MEMS devices is higher than traditional technologies.
+</ul>
+</p>
+
+<h3>Conclusion</h3>
+<p>MEMS technology has revolutionized the way we interact with the environment. With their small size, low power consumption, and high precision, MEMS devices have enabled the development of new applications and products that were previously not possible. However, the challenges associated with MEMS technology need to be addressed to ensure its widespread adoption in various industries.
+</p>
+<!--- MEMS description ends --->
+
 ## ML Model
 
 CNN 
