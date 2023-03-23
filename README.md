@@ -21,6 +21,9 @@
             </ul>
         </li>
         <li>
+              <a href="#ml-model">ML Model</a>
+        </li>  
+        <li>
           <a href="#Deep Learning">Deep learning</a>
         </li>
         <li>
@@ -121,6 +124,34 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 
 <!--- Microcontroller description ends --->
+
+## ML Model
+
+CNN 
+
+A Convolutional neural network (CNN) is a neural network that has one or more convolutional layers and are used mainly for image processing, classification, segmentation and also for other auto correlated data.
+A convolution is essentially sliding a filter over the input. One helpful way to think about convolutions is this quote from Dr Prasad Samarakoon: “A convolution can be thought as “looking at a function’s surroundings to make better/accurate predictions of its outcome.”
+
+![image](https://user-images.githubusercontent.com/97295669/224393238-dd832da9-6724-4cd7-bcbe-412659879d0c.png)
+
+
+The architecture of the model used here is as follows :
+|Layer (type) |               Output Shape|              Param #   |
+|---------------|----------------------------|--------------------------|
+| conv2d (Conv2D)     |        (None, 39, 861, 16)  |    80     |   
+| max_pooling2d (MaxPooling2D ) | (None, 19, 430, 16)   |   0      |   
+|dropout (Dropout)      |     (None, 19, 430, 16)   |    0         |                                                                 
+| conv2d_1 (Conv2D)    |       (None, 18, 429, 32)  |     2080     |                                                                  
+| max_pooling2d_1 (MaxPooling2D)|  (None, 9, 214, 32) |      0        |                                                                                   
+| dropout_1 (Dropout)  |       (None, 9, 214, 32)   |    0         |                                                                
+| conv2d_2 (Conv2D)    |       (None, 8, 213, 64)   |     8256      |                                                                 
+| max_pooling2d_2 (MaxPooling 2D) |  (None, 4, 106, 64)  |     0     |                                                                                                 |dropout_2 (Dropout)   |      (None, 4, 106, 64)   |     0   |      
+| conv2d_3 (Conv2D)     |      (None, 3, 105, 128)   |    32896    |                                                                 
+| max_pooling2d_3 (MaxPooling 2D) |  (None, 1, 52, 128)  |     0   |                                                                                                    
+| dropout_3 (Dropout)    |     (None, 1, 52, 128)   |     0     |                                                                     
+|global_average_pooling2d (G lobalAveragePooling2D)|  (None, 128)    |          0       |                                                                                                            
+|dense (Dense)      |         (None, 6)         |        774      | 
+
 <h3>Deep Learning</h3>
 RNN
 
