@@ -200,6 +200,26 @@ use is expected to increase in the future.
 </p>
 <!--- MEMS description ends --->
 
+<!--- Dataset description starts --->
+
+<h2>Dataset</h2>
+<a href = "https://www.kaggle.com/datasets/vbookshelf/respiratory-sound-database?resource=download"> Link to the dataset</a>
+<p>This dataset is a collection of respiratory sound recordings. The dataset consists of a total of 920 annotated respiratory sound recordings (4.2 GB) in WAV format, collected from 126 patients. The recordings were collected from different clinical environments, including emergency departments, hospital wards, and outpatient clinics. The patients were suffering from various respiratory disorders, including asthma, chronic obstructive pulmonary disease.
+</p>
+
+<p>The respiratory sound recordings were collected using digital stethoscopes.</p>
+<ul>
+<li>Crackles (also called rales): Discontinuous sounds heard during inhalation or exhalation. They can be fine, medium, or coarse and may have different qualities, such as moist, dry, or bubbling.
+<li>Wheezes: Continuous, high-pitched sounds heard during exhalation or inhalation. They can be musical, whistling, or hissing in nature.
+<li>Other abnormal sounds: Sounds that do not fit into the categories of crackles or wheezes, such as stridor or pleural rubs.
+</ul>
+</p>
+
+<p>The dataset is organized into folders for each patient, with each folder containing one or more respiratory sound recordings in WAV format. Each recording is labeled with the presence or absence of crackles and wheezes, as well as the overall quality of the recording. The annotations are provided in text files with the same name as the corresponding recording.
+</p>
+<!--- Dataset description ends --->
+
+
 ## ML Model
 
 CNN 
