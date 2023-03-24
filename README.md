@@ -130,9 +130,34 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 <h2>Transmission</h2>
 <p>
-
+We are using the I2S(Inter-IC Sound ) protocol to transmit the sound signals.
+The I2S (Inter-IC Sound) protocol is a widely used serial communication protocol that is designed for transmitting digital audio signals between integrated circuits. This protocol is widely used in digital audio applications.
 </p>
+<b>Overview of I2S Protocol:</b>
+<p>The I2S protocol is a simple, yet effective way of transmitting digital audio signals between different integrated circuits. It is a serial protocol that uses three lines for communication: data line, clock line, and word select line.
+</p>
+<b>Data Line:</b>
+<p>The data line is used for transmitting the actual digital audio data between the integrated circuits. The data is transmitted in a serial format, which means that each bit is sent one after another.
+</p>
+<b>Clock Line:</b>
+<p>The clock line is used for synchronizing the data transfer between the two integrated circuits. It is used to ensure that the receiving integrated circuit knows when to expect a new bit of data.
+</p>
+<b>Word Select Line:</b>
+<p>The word select line is used to indicate whether the data being transmitted is left-channel or right-channel audio data.
+</p>
+<img src="https://prodigytechno.com/wp-content/uploads/2021/03/i2s2-600x183.png" alt="I2S format">
+
+<b>I2S Interface:</b>
+<p><em>The I2S interface consists of two components:</em> the <b>transmitter</b> and the <b>receiver</b>. The transmitter is responsible for converting analog audio signals into digital signals and transmitting them using the I2S protocol. The receiver is responsible for receiving the digital signals and converting them back into analog audio signals.</p>
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/introduction-to-the-i2s-interface_rk_aac_image1.jpg" alt="I2S Interface">
+
+<b>Usage of I2S Protocol in our project:</b>
+<p>In our project, the I2S protocol is used to transmit digital audio signals from the microphone to the processing unit. The microphone captures the analog audio signals and converts them into digital signals using an analog-to-digital converter (ADC). The digital signals are then transmitted to the processing unit using the I2S protocol. The processing unit receives the digital signals, processes them, and converts them back into analog audio signals using a digital-to-analog converter (DAC). The analog audio signals are then sent to the ML model for detection.
+</p>
+
 <!--- Transmission description ends --->
+<hr>
 
 <!--- MEMS description starts --->
 <h2>MEMS</h2>
@@ -208,6 +233,8 @@ use is expected to increase in the future.
 <p>MEMS technology has revolutionized the way we interact with the environment. With their small size, low power consumption, and high precision, MEMS devices have enabled the development of new applications and products that were previously not possible. However, the challenges associated with MEMS technology need to be addressed to ensure its widespread adoption in various industries.
 </p>
 <!--- MEMS description ends --->
+
+<hr>
 
 <!--- Dataset description starts --->
 
