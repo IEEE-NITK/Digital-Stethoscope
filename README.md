@@ -17,6 +17,7 @@
             <a href="#literature-survey">Literature Survey</a>
             <ul>
                 <li><a href="#ESP32">MicroController</a></li>
+                <li><a href="#Transmission">Data Transmission</a></li>
                 <li><a href="#Deep-Learning-Model">Detection Model</a></li>
             </ul>
         </li>
@@ -124,6 +125,14 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 
 <!--- Microcontroller description ends --->
+
+<!--- Transmission description starts --->
+
+<h2>Transmission</h2>
+<p>
+
+</p>
+<!--- Transmission description ends --->
 
 <!--- MEMS description starts --->
 <h2>MEMS</h2>
