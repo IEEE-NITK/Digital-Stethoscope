@@ -130,7 +130,7 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 <h2>Transmission</h2>
 <p>
-We are using the I2S(Inter-IC Sound ) protocol to transmit the sound signals.
+We are using the I2S(Inter-IC Sound ) protocol to transmit the sound signals. The rate at which data is being transmitted is 8KHz.
 The I2S (Inter-IC Sound) protocol is a widely used serial communication protocol that is designed for transmitting digital audio signals between integrated circuits. This protocol is widely used in digital audio applications.
 </p>
 <b>Overview of I2S Protocol:</b>
@@ -158,6 +158,15 @@ The I2S (Inter-IC Sound) protocol is a widely used serial communication protocol
 
 <!--- Transmission description ends --->
 <hr>
+
+<!--- Preamp description starts --->
+<h2>Preamp</h2>
+<p>A preamplifier, also known as a preamp, is an electronic amplifier that converts a weak electrical signal into an output signal strong enough to be noise-tolerant and strong enough for further processing, or for sending to apower amplifier and loud speaker. An ideal preamp will be linear (have a constant gain through its operating range), have high input impedance (requiring only a minimal amount of current to sense the input signal) and a low output impedance (when current is drawn from the output there is minimal change in the output voltage).
+</p>
+<img src="https://user-images.githubusercontent.com/96785457/227601324-fc54864a-a1f2-4eaa-b858-ac07d4a24ab0.jpg" alt="circut diagram">
+<p>For more details <a href="https://github.com/CHANDAN-2003/Digital-Stethoscope/tree/main/Hardware/Pre-Amp%20Circuit#readme">preamp</a>.</p>
+
+<!--- Preamp description ends --->
 
 <!--- MEMS description starts --->
 <h2>MEMS</h2>
@@ -312,13 +321,6 @@ Tried couple of architecture but one given here is as :
 | Dense    | (None,3) | 195 |
 
 
-## Results
-This gave accuracies of : 
-- model train data score       :  74 %
-- model test data score        :  76 %
-- model validation data score  :  79 %
-- model unlabeled data score   :  74 %
-<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://user-images.githubusercontent.com/119749228/224388357-968e1a6b-347e-49fd-b49e-97095111a611.png">
 
 <!--- MFCC STARTS HERE --->
 <h1>MFCC</h1>
@@ -336,6 +338,14 @@ align = "middle"
 <h3>Power Spectrogram </h3>
 <img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/power_spectogram.jpg" alt="MFCCs">
 <!--- MFCC ends HERE --->
+
+## Results
+This gave accuracies of : 
+- model train data score       :  74 %
+- model test data score        :  76 %
+- model validation data score  :  79 %
+- model unlabeled data score   :  74 %
+<img width="669" alt="Screenshot 2023-03-10 at 9 38 11 AM" src="https://user-images.githubusercontent.com/119749228/224388357-968e1a6b-347e-49fd-b49e-97095111a611.png">
 
 ## Project Mentors
 
