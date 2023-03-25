@@ -7,3 +7,21 @@ An ideal preamp will be linear **(have a constant gain through its operating ran
 
 
 
+The resistors R6, and R7 form a voltage divider to bias the non-inverting input of U2 at half the supply voltage. This ensures that the output voltage swing of the second stage is centered around half the supply voltage, allowing maximum output swing without clipping.
+
+Total Gain of the preamp = gain of first stage * gain of second stage = 57*21 = 1197.
+</p>
+
+<h3>Waveforms</h3>
+<h4>Input $V_{in}$</h4>
+<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/input.jpg" alt="input Vin">
+<h4>$V_{out}$</h4>
+<img src ="https://github.com/CHANDAN-2003/Digital-Stethoscope/blob/main/resources/Output.jpeg" alt ="output img">
+
+$V_{n004} = Output\ of \ stage 2$
+
+$V_{n002} = Output\ of\ stage 1$
+
+<h4>Frequency Response</h4>
+
+![image](https://user-images.githubusercontent.com/97295669/227711224-cc5aef8a-42e8-495e-966c-b35f55364e36.png)
