@@ -1,26 +1,38 @@
 # What is Pre-Amplifier?
 A preamplifier, also known as a preamp, is an electronic amplifier that converts a weak electrical signal into an output signal strong enough to be noise-tolerant and strong enough for further processing, or for sending to apower amplifier and loud speaker.
 An ideal preamp will be linear **(have a constant gain through its operating range)**, have high input impedance **(requiring only a minimal amount of current to sense the input signal)** and a low output impedance **(when current is drawn from the output there is minimal change in the output voltage)**.
-# Circuit Diagram for the [Preamp1](https://github.com/IEEE-NITK/Digital-Stethoscope/blob/main/Hardware/preamp_5.asc):
-![image](https://user-images.githubusercontent.com/96785457/217804933-3152c1b9-5be8-487b-9396-e3e77031851c.png)
-### Calculation:
-![git1](https://user-images.githubusercontent.com/96785457/217854871-38c850fd-844d-4f8b-b076-bee2ade8ba3a.jpg)
+# Circuit Diagram for the [Preamp](https://github.com/gagan20003/Digital-Stethoscope/blob/main/Hardware/Pre-Amp%20Circuit/preamp_9.asc):
 
-![git2](https://user-images.githubusercontent.com/96785457/217854383-270f58ec-007f-4fde-9e97-92b01498fb6b.jpg)
+![WhatsApp Image 2023-03-23 at 19 40 16](https://user-images.githubusercontent.com/96785457/227601324-fc54864a-a1f2-4eaa-b858-ac07d4a24ab0.jpg)
 
-### Waveforms:
+<h3>Working </h3>
+<p>
+The signal source (V_in) is connected to the non-inverting input of the op-amp (U2). The voltage at this input is compared to the voltage at the inverting input (which is held at virtual ground due to negative feedback), and the op-amp amplifies the difference between the two inputs. The gain of the amplifier is determined by the ratio of the feedback resistor (R3) to the input resistor (R4), according to the formula:
 
-![WhatsApp Image 2023-02-09 at 20 36 43](https://user-images.githubusercontent.com/96785457/217852896-f297f102-7ec9-4e68-bd33-9d1ddcaffa69.jpg)
+Gain = $1 + \frac{R_3}{R_4}$
 
-This waveform shows that the input signal has been shifted to 129 mV. So that your sampled signal has only positive values.
+In this circuit, the gain is set to 57 ( $1 + \frac{56k}{1k}$).
 
-# Characteristics of the above circuit:
-![image](https://user-images.githubusercontent.com/96785457/217806758-84c1ee36-9763-4b18-9f12-271d685dc743.png)
-**Input**-V(n010)<br />
- **Output**-V(n003)<br />
-**gain**=V(n003)/V(n010)<br />
-The frequency Response for the circuit is:
-![WhatsApp Image 2023-02-09 at 21 01 29](https://user-images.githubusercontent.com/96785457/217858074-7f83b79c-0c95-443e-ab19-29a5e2a652bb.jpg)
+The output of the first stage is fed to a second non-inverting op-amp amplifier (U1), which provides additional gain. The gain of this amplifier is determined by the ratio of the feedback resistor (R1) to the input resistor (R2), according to the formula given earlier. In this circuit, the gain is set to 
+21 ( $1 + \frac{20k}{1k}$).
 
-The circuit has a [butterworth filter](https://github.com/IEEE-NITK/Digital-Stethoscope/blob/main/Hardware/butterworth_filter/readMe.md) whose f<sub>c</sub> is 298 Hz.
+The capacitors C1 and C3 are used to filter out any DC offset present in the input signal, preventing it from being amplified by the op-amps. The capacitor C2 is used to filter out high-frequency noise that may be present in the signal.
 
+The resistors R6, and R7 form a voltage divider to bias the non-inverting input of U2 at half the supply voltage. This ensures that the output voltage swing of the second stage is centered around half the supply voltage, allowing maximum output swing without clipping.
+
+Total Gain of the preamp = gain of first stage * gain of second stage = 57*21 = 1197.
+</p>
+
+<h3>Waveforms</h3>
+<h4>Input $V_{in}$</h4>
+<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/input.jpg" alt="input Vin">
+<h4>$V_{out}$</h4>
+<img src ="https://github.com/CHANDAN-2003/Digital-Stethoscope/blob/main/resources/Output.jpeg" alt ="output img">
+
+$V_{n004} = Output\ of \ stage 2$
+
+$V_{n002} = Output\ of\ stage 1$
+
+<h4>Frequency Response</h4>
+
+![image](https://user-images.githubusercontent.com/97295669/227711224-cc5aef8a-42e8-495e-966c-b35f55364e36.png)
