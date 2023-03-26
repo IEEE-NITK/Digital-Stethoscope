@@ -17,7 +17,7 @@
             <a href="#literature-survey">Literature Survey</a>
             <ul>
                 <li><a href="#ESP32">MicroController</a></li>
-                <li><a href="#Transmission">Data Transmission</a></li>
+                <li><a href="#Hardware">Hardware</a></li>
                 <li><a href="#Deep-Learning-Model">Detection Model</a></li>
             </ul>
         </li>
@@ -126,122 +126,76 @@ In this project, the esp32 is used to transmit the data collected from the micro
 
 <!--- Microcontroller description ends --->
 
-<!--- Transmission description starts --->
-
-<h2>Transmission</h2>
+<h2>Hardware</h2>
 <p>
-We are using the I2S(Inter-IC Sound ) protocol to transmit the sound signals. The rate at which data is being transmitted is 8KHz.
-The I2S (Inter-IC Sound) protocol is a widely used serial communication protocol that is designed for transmitting digital audio signals between integrated circuits. This protocol is widely used in digital audio applications.
+Heart and lung sounds can provide important diagnostic information to healthcare professionals. Let's look closer at the different types of sounds that can be heard with a stethoscope.
 </p>
-<b>Overview of I2S Protocol:</b>
-<p>The I2S protocol is a simple, yet effective way of transmitting digital audio signals between different integrated circuits. It is a serial protocol that uses three lines for communication: data line, clock line, and word select line.
+<h5>Heart Sounds:</h5>
+<p>The heart produces two main sounds, which are commonly referred to as "lub" and "dub." The first sound (lub) is caused by the closure of the mitral and tricuspid valves, which occurs when the ventricles contract and push blood out of the heart. The second sound (dub) is caused by the closure of the aortic and pulmonic valves, which occurs when the ventricles relax and fill with blood.
 </p>
-<b>Data Line:</b>
-<p>The data line is used for transmitting the actual digital audio data between the integrated circuits. The data is transmitted in a serial format, which means that each bit is sent one after another.
+<p>In addition to these two main sounds, there are also some abnormal heart sounds that can be indicative of various conditions, such as:
 </p>
-<b>Clock Line:</b>
-<p>The clock line is used for synchronizing the data transfer between the two integrated circuits. It is used to ensure that the receiving integrated circuit knows when to expect a new bit of data.
-</p>
-<b>Word Select Line:</b>
-<p>The word select line is used to indicate whether the data being transmitted is left-channel or right-channel audio data.
-</p>
-<img src="https://prodigytechno.com/wp-content/uploads/2021/03/i2s2-600x183.png" alt="I2S format">
-
-<b>I2S Interface:</b>
-<p><em>The I2S interface consists of two components:</em> the <b>transmitter</b> and the <b>receiver</b>. The transmitter is responsible for converting analog audio signals into digital signals and transmitting them using the I2S protocol. The receiver is responsible for receiving the digital signals and converting them back into analog audio signals.</p>
-
-<img src="https://www.allaboutcircuits.com/uploads/articles/introduction-to-the-i2s-interface_rk_aac_image1.jpg" alt="I2S Interface">
-
-<b>Usage of I2S Protocol in our project:</b>
-<p>In our project, the I2S protocol is used to transmit digital audio signals from the microphone to the processing unit. The microphone captures the analog audio signals and converts them into digital signals using an analog-to-digital converter (ADC). The digital signals are then transmitted to the processing unit using the I2S protocol. The processing unit receives the digital signals, processes them, and converts them back into analog audio signals using a digital-to-analog converter (DAC). The analog audio signals are then sent to the ML model for detection.
-</p>
-
-<!--- Transmission description ends --->
-<hr>
-
-<!--- Preamp description starts --->
-<h2>Preamp</h2>
-<p>A preamplifier, also known as a preamp, is an electronic amplifier that converts a weak electrical signal into an output signal strong enough to be noise-tolerant and strong enough for further processing, or for sending to apower amplifier and loud speaker. An ideal preamp will be linear (have a constant gain through its operating range), have high input impedance (requiring only a minimal amount of current to sense the input signal) and a low output impedance (when current is drawn from the output there is minimal change in the output voltage).
-</p>
-<img src="https://user-images.githubusercontent.com/96785457/227601324-fc54864a-a1f2-4eaa-b858-ac07d4a24ab0.jpg" alt="circut diagram">
-<p>For more details <a href="https://github.com/CHANDAN-2003/Digital-Stethoscope/tree/main/Hardware/Pre-Amp%20Circuit#readme">preamp</a>.</p>
-
-<!--- Preamp description ends --->
-
-<!--- MEMS description starts --->
-<h2>MEMS</h2>
-<img src="https://github.com/saliq7/..-../blob/main/IMG_20230309_233920.jpg" alt="MEMS"
-  width="700"
-  height="500"
-  align="middle"
->
-
-<h3>Overview</h3>
-<p> MEMS (Micro-Electro-Mechanical Systems) is a technology that integrates tiny mechanical components, such as sensors, actuators, and microelectronics, into a miniature system that can interact with the environment. These systems can be used in a wide range of applications, including healthcare, consumer electronics, transportation, and aerospace. </p>
-
-<h3>Usage</h3>
-<p>The MEMS technology can be used to develop various types of systems and devices. Some examples of MEMS applications include:
 <ul>
-<li> Accelerometers: Used to measure acceleration, tilt, and vibration.</li>
-<li> Gyroscopes: Used to measure angular velocity and orientation. </li>
-<li> Microphones: Used to convert sound waves into electrical signals.</li>
-<li> Pressure sensors: Used to measure pressure changes in gas or liquids. </li>
+    <li>
+        Murmurs: Abnormal whooshing or swishing sounds caused by turbulent blood flow through the heart
+    </li>
+    <li>
+        Gallops: Extra heart sounds that occur in addition to the lub-dub sounds and can indicate heart failure or other conditions.
+    </li>
+    <li>
+        Clicks: High-pitched sounds are caused by the opening or closing of heart valves and can indicate valve problems.
+    </li>
 </ul>
-</p>
 
-<h3>Advantages</h3>
-<p>MEMS technology offers several advantages over traditional technologies:
+<h5>Lung Sounds:</h5>
+<p>The lungs produce various sounds that can be heard with a stethoscope. The most common lung sounds are:
+</p>
 <ul>
-<li>Miniaturization: MEMS devices can be fabricated in tiny sizes, making them ideal for applications where space is limited.
-<li>Low power consumption: MEMS devices consume very little power, which makes them ideal for battery-operated applications.
-<li>High precision: MEMS devices can be fabricated with high precision, making them suitable for applications that require high accuracy.
-<li>Integration: MEMS devices can be integrated with other components, such as microelectronics, to create complex systems.
+    <li>
+        Bronchial sounds: Loud, high-pitched sounds can be heard over the trachea and larger airways.
+    </li>
+    <li>
+        Vesicular sounds: Softer, lower-pitched sounds can be heard over the smaller airways and lung tissue.
+    </li>
+    <li>
+        Crackles: Sounds caused by the opening of small airways that have been closed due to inflammation or fluid buildup.
+    </li>
+    <li>
+        Wheezes: High-pitched sounds caused by narrowed airways, often due to asthma or chronic obstructive pulmonary disease (COPD).
+    </li>
 </ul>
-</p>
 
-<h3>MEMS as mic</h3>
 <p>
-MEMS (Microelectromechanical Systems) sensors have emerged as a promising
-technology for various applications including microphones. MEMS microphones
-are tiny devices that can capture sound and convert it into an electrical signal.
-MEMS microphones offer several advantages over traditional electromagnetic
-microphones, including smaller sizes, lower power consumption, and higher
-sensitivity.
-The design of the overall system is shown in Figure 1. The auscultation probe of
-the MEMS electronic heart sound sensor is affixed to the registry and receives the
-faint heart sound signals. The heart sounds are transferred to the filter after the
-pre-amplifier to filter the high-frequency noise of the filter and environment and
-the high-frequency components of the signals. Then the signals are transferred to a
-PC or mobile phone for real-time display after the comparator. The signals also
-would be transmitted to a loudspeaker or headphones for listening after the power
-amplifier
+Digital stethoscopes can amplify and filter these sounds, making them easier to hear and interpret and allowing for more accurate diagnosis and treatment.
 </p>
-<img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/mems.jpg" alt="Explaination of mems as a mic">
 
-<h3>Why MEMS</h3>
 <p>
-MEMS microphones have shown significant promise in terms of their performance
-compared to traditional electromagnetic microphones. MEMS microphones have
-the potential to be used in various applications, including hearing aids,
-smartphones, and other portable electronic devices. Ongoing research in this field
-aims to improve the performance of MEMS microphones even further, and their
-use is expected to increase in the future.
+In this project, we are utilizing an analog microphone to capture the subtle sounds of the heart and lungs. To ensure high-quality recordings, we have designed an RC low pass filter with a cut-off frequency of 4 kHz, which effectively reduces any high-frequency noise that may interfere with the recordings.
 </p>
 
-<h3>Challenges</h3>
-<p>MEMS technology also poses several challenges that need to be addressed:
-<ul>
-<li>Fabrication: The process of fabricating MEMS devices is complex and requires specialized equipment.
-<li>Reliability: MEMS devices may fail due to factors such as mechanical stress, temperature changes, and contamination.
-<li>Packaging: MEMS devices need to be packaged in a way that protects them from the environment and ensures their reliability.
-<li>Cost: The cost of fabricating MEMS devices is higher than traditional technologies.
-</ul>
+<p>
+It is worth noting that heart sounds typically fall within the frequency range of 5-600 Hz, while the frequency range of healthy lung sounds can extend up to 1000 Hz. In certain abnormal cases, lung sounds may even appear at frequencies above 2000 Hz. By capturing these sounds within the appropriate frequency range, we can detect any anomalies that may be indicative of underlying medical conditions. Our approach provides a unique opportunity to identify and monitor heart and lung health using a non-invasive, low-cost method.
 </p>
 
-<h3>Conclusion</h3>
-<p>MEMS technology has revolutionized the way we interact with the environment. With their small size, low power consumption, and high precision, MEMS devices have enabled the development of new applications and products that were previously not possible. However, the challenges associated with MEMS technology need to be addressed to ensure its widespread adoption in various industries.
+<p>
+The output of the analog microphone is initially fed into an RC low-pass filter with a cut-off frequency of 4 kHz to eliminate high-frequency noise that could potentially disrupt the recordings. The filtered signal is then amplified using a two-stage non-inverting configuration of operational amplifiers, which boosts the signal to a level that can be detected by the microcontroller.
 </p>
-<!--- MEMS description ends --->
+
+<p>
+It is important to note that we have utilized a single supply for the operational amplifiers, with the supply voltages being +Vcc and Gnd, in contrast to the conventional method of using +Vcc and -Vcc. The amplified signal is then directed towards a second-order Butterworth filter, which further removes any unwanted noise, ensuring that the signal being processed is clear and accurate.
+</p>
+
+<p>
+The output from the Butterworth filter is then fed to the analog pin of an ESP32 microcontroller, which collects data at a rate of 8000 samples per second. This sampling rate is sufficient, as the frequency range of heart and lung sounds fall below 4kHz, and according to the Nyquist theorem, we need to sample the signal at least twice the maximum frequency to reconstruct it accurately.
+</p>
+
+<p>
+The collected data is then transmitted via a WiFi-based communication channel to a server, where it is stored for further analysis. In this case, we are using a laptop as our server to store the recorded data. The stored data is then processed using a Machine Learning (ML) model, which enables us to classify the different heart and lung sounds accurately.
+</p>
+
+<p>
+Overall, this approach provides a non-invasive, convenient, and low-cost method for monitoring and diagnosing medical conditions related to heart and lung sounds. The ML model enhances the accuracy of the analysis, allowing for more precise detection and diagnosis of potential medical issues.
+</p>
 
 <hr>
 
